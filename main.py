@@ -1,10 +1,16 @@
 #!/usr/bin/env python3
+import logging
+import sys
 from typing import List
 
 from telegram import Bot, Update, InlineQueryResultCachedSticker
 from telegram.ext import Updater, MessageHandler, InlineQueryHandler, Filters
 
 import config
+
+
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger()
 
 
 def into_words(q: str):
@@ -47,7 +53,7 @@ def on_query(bot: Bot, update: Update):
     if not inline_query:
         return
 
-    print("Inline query from {}:{} with text '{}'".format(
+    logger.info("Inline query from {}:{} with text '{}'".format(
         inline_query.from_user.id, inline_query.from_user.first_name,
         inline_query.query))
 
@@ -71,7 +77,7 @@ def on_message(bot: Bot, update: Update):
     sticker_is_in_db = is_sticker and message.sticker.file_id in config.STICKERS
 
     if sticker_is_in_db:
-        print("Message from {}:{} with known sticker '{}'".format(
+        logger.info("Message from {}:{} with known sticker '{}'".format(
             message.from_user.id, message.from_user.first_name,
             message.sticker.file_id))
         bot.send_message(
@@ -79,7 +85,7 @@ def on_message(bot: Bot, update: Update):
             config.HYPE_MSG,
             parse_mode='Markdown')
     elif is_sticker:
-        print("Message from {}:{} with unknown sticker '{}'".format(
+        logger.info("Message from {}:{} with unknown sticker '{}'".format(
             message.from_user.id, message.from_user.first_name,
             message.sticker.file_id))
         bot.send_message(
@@ -87,7 +93,7 @@ def on_message(bot: Bot, update: Update):
             config.STICKER_DATA_MSG.format(file_id=message.sticker.file_id),
             parse_mode='Markdown')
     else:
-        print("Message from {}:{} with text '{}'".format(
+        logger.info("Message from {}:{} with text '{}'".format(
             message.from_user.id, message.from_user.first_name, message.text))
         bot.send_message(
             message.chat.id,
@@ -99,7 +105,7 @@ def main():
     if not config.TELEGRAM_BOT_KEY:
         raise RuntimeError("Please, put you bot api key into the config.")
 
-    print("Stickers in the DB: {}".format(len(config.STICKERS)))
+    logger.info("Stickers in the DB: {}".format(len(config.STICKERS)))
 
     updater = Updater(token=config.TELEGRAM_BOT_KEY)
     dispatcher = updater.dispatcher
@@ -110,7 +116,7 @@ def main():
     msg_handler = MessageHandler(Filters.all, on_message)
     dispatcher.add_handler(msg_handler)
 
-    print("Starting the druzhbot...")
+    logger.info("Starting the druzhbot...")
     updater.start_polling()
 
 
