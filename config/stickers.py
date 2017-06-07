@@ -437,4 +437,43 @@ STICKERS = {
     'CAADAgADIQMAAtGzAgABqW81GbOMLIUC': [
         "я этого не позволю",
     ],
+    # Sticker pack of "Вторая ветка"
+    'CAADAgADYAADW4tqB30mikv4tJaqAg': [
+        "то что вы увидели называется мем",
+        "то что вы увидели называется мэм",
+    ],
+    'CAADAgADYQADW4tqB3i4It3r0-QBAg': [
+        "хайпанем немножечко",
+        "хайпанем немножко",
+    ],
+    'CAADAgADYgADW4tqB2zkU1aHAvOeAg': [
+        "логично не правда ли",
+        "логично неправда ли",
+    ],
+    'CAADAgADYwADW4tqB4lPMBbAIsKAAg': [
+        "я все понял",
+    ],
+    'CAADAgADZAADW4tqB7jten-xlbGqAg': [
+        "печальная история",
+    ],
+    'CAADAgADZQADW4tqByj0P59_G8F8Ag': [
+        "вечна только любовь",
+    ],
+    'CAADAgADZgADW4tqByulErn33f5sAg': [
+        "это вишенка на торте хайпа",
+        "это вишня на торте хайпа",
+    ],
+    'CAADAgADZwADW4tqB_exI1xaYckxAg': [
+        "воровать не плохо",
+    ],
+    'CAADAgADaQADW4tqB14Lj9akxUFPAg': [
+        "я попытался во всем разобраться и чуть не сошел с ума",
+    ],
+    'CAADAgADagADW4tqB_NETba-5KJzAg': [
+        "это какой-то заговор",
+    ],
+    'CAADAgADawADW4tqB_4W01Q-u94JAg': [
+        "продолжаем хайпить",
+        "даб", "дэб", "деб",
+    ],
 }
