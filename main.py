@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+from typing import List
+
 from telegram import Bot, Update, InlineQueryResultCachedSticker
 from telegram.ext import Updater, MessageHandler, InlineQueryHandler, Filters
 
@@ -19,13 +21,21 @@ def into_words(q: str):
     return words
 
 
+def word_in_words(word: str, words: List[str]):
+    for w in words:
+        if w.startswith(word):
+            return True
+    return False
+
+
 def search_stickers(query: str):
     query_words = into_words(query)
 
     stickers = []
     for file_id, texts in config.STICKERS.items():
         texts_string = " ".join(texts).lower()
-        if all([ w in texts_string for w in query_words ]):
+        texts_words = into_words(texts_string)
+        if all([ word_in_words(w, texts_words) for w in query_words ]):
             stickers.append(file_id)
 
     return stickers
