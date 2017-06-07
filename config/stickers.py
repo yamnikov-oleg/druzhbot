@@ -476,7 +476,46 @@ STICKERS = {
         "продолжаем хайпить",
         "даб", "дэб", "деб",
     ],
-    # Another pack of unknown author.
+    # Pack of unknown author. Part 1.
+    'CAADAgADTQADyJsDAAG6DcSDcxpKBAI': [
+        "сильное заявление",
+    ],
+    'CAADAgADTwADyJsDAAHVj7C7zmx4pAI': [
+        "проверять я его конечно не буду",
+    ],
+    'CAADAgADVQADyJsDAAF-dGNEOi-JXQI': [
+        "но как",
+    ],
+    'CAADAgADVwADyJsDAAHM0jJkjENL2gI': [
+        "вы неправы всего доброго",
+        "вы не правы всего доброго",
+    ],
+    'CAADAgADWwADyJsDAAHhXqhXmvjy3wI': [
+        "вы понимаете о чем говорят все эти люди я нет",
+    ],
+    'CAADAgADXQADyJsDAAHmXnaHEaSE7QI': [
+        "данная информация у нас в стране никому не нужна",
+    ],
+    'CAADAgADXwADyJsDAAEDnOXAuebkBgI': [
+        "это конечно не правда",
+        "это конечно неправда",
+    ],
+    'CAADAgADYQADyJsDAAG1qo8G-vdUOAI': [
+        "мое ожидание уже длится больше часа",
+    ],
+    'CAADAgADYwADyJsDAAHDfKTQ3nEFZwI': [
+        "наверстать упущенное практически невозможно",
+    ],
+    'CAADAgADZQADyJsDAAEoe0wLx8pmqAI': [
+        "я вышел в интернет с таким вопросом",
+    ],
+    'CAADAgADZwADyJsDAAFgnzXc_Gjs5wI': [
+        "ууу какое серьезное лицо",
+    ],
+    'CAADAgADaQADyJsDAAG3NoF1cpmzhQI': [
+        "но где доказательства",
+    ],
+    # Pack of unknown author. Part 2.
     'CAADAgADcQIAApkvSwqQMfp7RhueXgI': [
         "во",
     ],
