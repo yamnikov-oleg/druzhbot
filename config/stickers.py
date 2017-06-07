@@ -392,4 +392,49 @@ STICKERS = {
     'CAADAgADBwMAAtGzAgABxB9ITm_SjxAC': [
         "лысый рептилоид",
     ],
+    # Sticker pack by Nikita Popov and Yuriy Soloshenko. Volume 2.
+    # t.me/UpToHype
+    'CAADAgADFQMAAtGzAgABUu_ehIaCRbgC': [
+        "накрутим просмотры"
+    ],
+    'CAADAgADFgMAAtGzAgABYuzXiWfVbmoC': [
+        "машины посягнули на святое",
+    ],
+    'CAADAgADFwMAAtGzAgABTaac8EurKVQC': [
+        "я могу оскорбить чувства айтишников",
+        "я могу оскорбить чувства ITшников",
+    ],
+    'CAADAgADGAMAAtGzAgABUfXYSpyMz3QC': [
+        "роботы должны служить людям",
+    ],
+    'CAADAgADGwMAAtGzAgABO2b3vCMTSSwC': [
+        "кроме армян у меня нет знакомых иностранцев",
+    ],
+    'CAADAgADJQMAAtGzAgABRWDgUbKYsB8C': [
+        "это без учета 7 друзей в снапчате",
+        "это без учета семи друзей в снапчате",
+    ],
+    'CAADAgADGgMAAtGzAgABSiNSwbjPm88C': [
+        "я уверяю вас это не так",
+    ],
+    'CAADAgADHAMAAtGzAgABIKmcKb9xiNgC': [
+        "деньги дороже друзей",
+    ],
+    'CAADAgADHQMAAtGzAgABiGpDUOrCbdMC': [
+        "мы с навальным давние друзья",
+    ],
+    'CAADAgADHgMAAtGzAgABclwsw5q5XRsC': [
+        "все блоггеры товарищи",
+        "все блогеры товарищи",
+    ],
+    'CAADAgADHwMAAtGzAgABUOCa0ahesDUC': [
+        "эта мысль долго бегала по моим извилинам",
+    ],
+    'CAADAgADIAMAAtGzAgABlt3BrqWFnW4C': [
+        "это ту мач",
+        "too much",
+    ],
+    'CAADAgADIQMAAtGzAgABqW81GbOMLIUC': [
+        "я этого не позволю",
+    ],
 }
