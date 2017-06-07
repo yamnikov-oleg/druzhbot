@@ -6,9 +6,16 @@ import config
 
 
 def into_words(q: str):
+    # Remove all syntax symbols
+    syntax_marks = ",.!?-"
+    for sym in syntax_marks:
+        q = q.replace(sym, ' ')
+
+    # Split into words
     words = q.lower().strip().split()
     words = [w.strip() for w in words]
     words = [w for w in words if w]
+
     return words
 
 
@@ -17,11 +24,9 @@ def search_stickers(query: str):
 
     stickers = []
     for file_id, texts in config.STICKERS.items():
-        for text in texts:
-            text = text.lower()
-            if any([ w in text for w in query_words ]):
-                stickers.append(file_id)
-                break
+        texts_string = " ".join(texts).lower()
+        if all([ w in texts_string for w in query_words ]):
+            stickers.append(file_id)
 
     return stickers
 
