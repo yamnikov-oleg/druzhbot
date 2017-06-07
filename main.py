@@ -48,7 +48,15 @@ def on_message(bot: Bot, update: Update):
     if not message:
         return
 
-    if message.sticker:
+    is_sticker = bool(message.sticker)
+    sticker_is_in_db = is_sticker and message.sticker.file_id in config.STICKERS
+
+    if sticker_is_in_db:
+        bot.send_message(
+            message.chat.id,
+            config.HYPE_MSG,
+            parse_mode='Markdown')
+    elif is_sticker:
         bot.send_message(
             message.chat.id,
             config.STICKER_DATA_MSG.format(file_id=message.sticker.file_id),
