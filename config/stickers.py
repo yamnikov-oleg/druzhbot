@@ -476,4 +476,309 @@ STICKERS = {
         "продолжаем хайпить",
         "даб", "дэб", "деб",
     ],
+    # Another pack of unknown author.
+    'CAADAgADcQIAApkvSwqQMfp7RhueXgI': [
+        "во",
+    ],
+    'CAADAgADnwIAApkvSwpAf6KT3FrhngI': [
+        "добрый день",
+    ],
+    'CAADAgADbQIAApkvSwp0-HC2qjjZ5gI': [
+        "кажется у меня проблемы",
+    ],
+    'CAADAgADVAIAApkvSwoIQjD_a2vw5QI': [
+        "звучит неплохо",
+        "звучит не плохо",
+    ],
+    'CAADAgADcwIAApkvSwrSZPbKSDh4rgI': [
+        "я в это мало верю",
+    ],
+    'CAADAgADXAIAApkvSwoM8DxxtnEXoAI': [
+        "возможно ли это да",
+    ],
+    'CAADAgAD-AcAApkvSwqijDN-Gvph3QI': [
+        "конечно нет",
+    ],
+    'CAADAgADTgIAApkvSwqWZhyxvn6wCAI': [
+        "с какой целью зачем",
+    ],
+    'CAADAgADjAQAApkvSwrJDnsfZOpYDQI': [
+        "попробуем разобраться",
+    ],
+    'CAADAgADLwMAApkvSwoVZ73V5X77ywI': [
+        "честно сказать не хочется комментировать эту ситуацию",
+        "честно сказать не хочется коментировать эту ситуацию",
+    ],
+    'CAADAgAD1woAApkvSwpn1F2JzK1o5wI': [
+        "видно это не монтаж",
+    ],
+    'CAADAgAD_AcAApkvSwrqgUIPiH3KhgI': [
+        "все в наших руках",
+    ],
+    'CAADAgADkgQAApkvSwrEs_gzP9JY9wI': [
+        "и на том спасибо",
+    ],
+    'CAADAgAD0gMAApkvSwpx76c34TqqnwI': [
+        "верить или нет",
+    ],
+    'CAADAgADOQMAApkvSwoyJXnlsVArzAI': [
+        "не все так просто",
+        "не всё так просто",
+    ],
+    'CAADAgADcgcAApkvSwo2mDheWobRcAI': [
+        "удачи",
+    ],
+    'CAADAgADbAcAApkvSwqNlreVwAABal0C': [
+        "многовато стало чудес",
+    ],
+    'CAADAgADAgMAApkvSwr_2VciRhHWxgI': [
+        "так ли это на самом деле",
+    ],
+    'CAADAgADbgcAApkvSwq8S9lJIIDpsAI': [
+        "что ж проверим",
+        "чтож проверим",
+    ],
+    'CAADAgADKAUAApkvSwrcSz6ukhbpGAI': [
+        "такого я конечно не ожидал",
+    ],
+    'CAADAgADHgUAApkvSwpL19P8NL2tuAI': [
+        "эксперты с которыми я общался говорят можно",
+    ],
+    'CAADAgADMQMAApkvSwpntcESv1guBgI': [
+        "я испытал мощный эмоциональный подъем",
+        "я испытал мощный эмоциональный подъём",
+    ],
+    'CAADAgADVAMAApkvSwo2S40k6XqcYQI': [
+        "отрицать бессмысленно",
+        "отрицать бесмысленно",
+    ],
+    'CAADAgADWAIAApkvSwrlGKlU0-_HaAI': [
+        "неужели все таки серьезно",
+        "неужели всё таки серьёзно",
+    ],
+    'CAADAgADDgUAApkvSwoZGTj84Jq9CQI': [
+        "все гораздо серьезнее",
+        "все гораздо серьёзнее",
+    ],
+    'CAADAgADewIAApkvSwoYWjRcemSWSQI': [
+        "от этого зависит наше будущее",
+    ],
+    'CAADAgADCgUAApkvSwqfIKhRxUh1BwI': [
+        "а жаль",
+    ],
+    'CAADAgADGQUAApkvSwq66_ibEEF3kQI': [
+        "обидно",
+    ],
+    'CAADAgADogIAApkvSwphS5u5VgABxggC': [
+        "я не хочу этот банан",
+    ],
+    'CAADAgADlgcAApkvSwriapVTy1XumQI': [
+        "правда",
+    ],
+    'CAADAgADTAIAApkvSwqj4E9bo0-mmQI': [
+        "есть факты говорящие об обратном",
+    ],
+    'CAADAgADIAUAApkvSwpzJj0ELercjwI': [
+        "это конечно спорный вопрос",
+    ],
+    'CAADAgADhgQAApkvSwrXlBkXrjSa_QI': [
+        "но увы",
+    ],
+    'CAADAgADKwMAApkvSwrKciiwzXfFsgI': [
+        "мое ощущение полная беспомощность",
+        "моё ощущение полная беспомощность",
+    ],
+    'CAADAgADcAcAApkvSwqzES9ZJbdU7QI': [
+        "я не стану экспериментировать",
+    ],
+    'CAADAgADBAMAApkvSwr4GO1hP_3c7wI': [
+        "это отнюдь не салют в мою честь",
+    ],
+    'CAADAgADrAMAApkvSwpInLR2bokahgI': [
+        "настало время развеять сомнения",
+    ],
+    'CAADAgADjgIAApkvSwpFzK2lrH8RSQI': [
+        "и никакой романтики",
+        "и ни какой романтики",
+    ],
+    'CAADAgADDAUAApkvSwp2lCWG4g9u8gI': [
+        "и тем не менее",
+    ],
+    'CAADAgADnAMAApkvSwogTCh3XmDS7gI': [
+        "в этом действительно нет ничего плохого",
+    ],
+    'CAADAgADfQIAApkvSwonw64OPxgpnAI': [
+        "вот в чем секрет",
+        "вот в чём секрет",
+    ],
+    'CAADAgADqgMAApkvSwovd1z4kQVWPAI': [
+        "была для этого веская и страшная причина",
+    ],
+    'CAADAgADkAQAApkvSwqirg-bZi1_NgI': [
+        "этого не знает никто",
+    ],
+    'CAADAgAD7AIAApkvSwpGiKtvF89tyQI': [
+        "не приведет ли это к полному краху"
+    ],
+    'CAADAgAD4gIAApkvSwqnmsHEdkto9AI': [
+        "сложно представить последствия этого",
+    ],
+    'CAADAgADjQMAApkvSwoKHLpS_ssG3wI': [
+        "довольно точное выражение",
+    ],
+    'CAADAgAD9gIAApkvSwqPXGJz4naGHAI': [
+        "как бы не так",
+    ],
+    'CAADAgAD9AIAApkvSwp2a37F4b3R7AI': [
+        "договоренности срываются в последний момент",
+        "договорённости срываются в последний момент",
+    ],
+    'CAADAgADDgMAApkvSwqnjFNpPz0IPgI': [
+        "было неприятно",
+    ],
+    'CAADAgADJAUAApkvSwofRUPmiiH6UQI': [
+        "то что мы делаем считается большим грехом",
+    ],
+    'CAADAgADFAMAApkvSwpbtssWzTYWdwI': [
+        "и это не просто громкие слова",
+    ],
+    'CAADAgADFgMAApkvSwqpsK2uOrHg8gI': [
+        "я бы назвал это запахом опасности",
+    ],
+    'CAADAgADmQMAApkvSwqjwvOIr52qFQI': [
+        "это мало похоже не комедию",
+    ],
+    'CAADAgADlwMAApkvSwqHWHilufZz5wI': [
+        "я называю это коллективным помешательством",
+    ],
+    'CAADAgADCAMAApkvSwom2WeRW-P08AI': [
+        "ну вряд ли уважаемый человек будет лгать",
+    ],
+    'CAADAgADEgMAApkvSwr-9PaGhuaYvQI': [
+        "я разумеется тоже",
+    ],
+    'CAADAgADNwMAApkvSwrd8kC724H93QI': [
+        "я не могу ответить",
+    ],
+    'CAADAgADbwIAApkvSwrVGxqjrNA20AI': [
+        "и я не могу",
+    ],
+    'CAADAgADZAIAApkvSwrpCJv63gqZOQI': [
+        "но если это все правда",
+    ],
+    'CAADAgADFwUAApkvSwos1qiGojj8UwI': [
+        "любопытно",
+    ],
+    'CAADAgAD_gcAApkvSwq_CJ4u745t4gI': [
+        "ответ банален",
+    ],
+    'CAADAgADIgUAApkvSwq9cHr0yZYcPgI': [
+        "этому должно быть объяснение",
+        "этому должно быть обьяснение",
+    ],
+    'CAADAgADzgMAApkvSwq1nWJNTUf5dAI': [
+        "этому парадоксу есть научное объяснение",
+        "этому парадоксу есть научное обьяснение",
+    ],
+    'CAADAgADEAUAApkvSwoHFO4R6fTsdgI': [
+        "так думал и я",
+    ],
+    'CAADAgADlAMAApkvSwrjnLbgovvTnQI': [
+        "у нас нет другого выхода",
+    ],
+    'CAADAgAD1AMAApkvSwrY0bNq3gFUBwI': [
+        "остается поверить",
+        "остаётся поверить",
+    ],
+    'CAADAgAD4AIAApkvSwqDwEMgf-1zhQI': [
+        "однако",
+    ],
+    'CAADAgADfwIAApkvSwpYY0yPUCF8XgI': [
+        "напрасно",
+    ],
+    'CAADAgADaAIAApkvSwpTduSKuD8PEAI': [
+        "назовите пожалуйста сумму",
+    ],
+    'CAADAgADeQIAApkvSwpMTVW9FFIcMQI': [
+        "это много или мало",
+    ],
+    'CAADAgADVgIAApkvSwoIrNw5AzMUKAI': [
+        "так получилось",
+    ],
+    'CAADAgADaAcAApkvSwoPrJ65jOiwlAI': [
+        "но случится это не скоро",
+        "но случится это нескоро",
+    ],
+    'CAADAgADagcAApkvSwqwR9Su40YuEAI': [
+        "я нахожу этому все больше подтверждений",
+        "я нахожу этому всё больше подтверждений",
+    ],
+    'CAADAgAD-AIAApkvSwqhyCC_Tpf5sQI': [
+        "какой-то набор слов",
+    ],
+    'CAADAgADjgQAApkvSwqHQwKZWv7CwwI': [
+        "я бы не обрадовался",
+    ],
+    'CAADAgADbQQAApkvSwomGgfgu7-K5wI': [
+        "одна бабка сказала",
+    ],
+    'CAADAgADJgUAApkvSwpzAxyiCwNoKwI': [
+        "мысли материализовались",
+    ],
+    'CAADAgADbwQAApkvSwpcTt0P92o4fAI': [
+        "меня напугали",
+    ],
+    'CAADAgADRgIAApkvSwp_yE_OuP8bDQI': [
+        "да я попал впросак",
+        "да я попал в просак",
+    ],
+    'CAADAgADNQMAApkvSwq8Yk6yFafqqwI': [
+        "а жить становится все менее комфортно",
+        "а жить становиться все менее комфортно",
+    ],
+    'CAADAgADYAIAApkvSwqC9YMUJnEXbwI': [
+        "это очередной миф",
+    ],
+    'CAADAgADrgMAApkvSwo4vN_RM2A4RAI': [
+        "надеюсь мы увидим нечто уникальное",
+    ],
+    'CAADAgADHAUAApkvSworg451b5k1qwI': [
+        "а что если поступить с точностью до наоборот",
+    ],
+    'CAADAgADagIAApkvSwp7vy6i_apapgI': [
+        "ну что",
+    ],
+    'CAADAgADsAMAApkvSwolSWyTIAumEAI': [
+        "так это или нет",
+    ],
+    'CAADAgADZgIAApkvSwrgfLzR8o6EzgI': [
+        "немного болит голова может быть потому что я",
+    ],
+    'CAADAgADiwMAApkvSwpZNNng_zRXPAI': [
+        "поразительно",
+    ],
+    'CAADAgADYgIAApkvSwqKDqk0xHu4RQI': [
+        "парадокс",
+    ],
+    'CAADAgAD_gIAApkvSwqjcKJqynNKcgI': [
+        "если бы",
+    ],
+    'CAADAgADZgcAApkvSwrQ-O2DCYOZkwI': [
+        "мой самолет улетает через час",
+    ],
+    'CAADAgADhQIAApkvSwpjb2DJeV-2bQI': [
+        "а если ты ошибешься",
+    ],
+    'CAADAgADdQIAApkvSwqwym4BZp1j6wI': [
+        "я решил не останавливаться на достигнутом",
+    ],
+    'CAADAgAD1goAApkvSwqMRE0EXh2KHQI': [
+        "добро пожаловать в наномир",
+    ],
+    'CAADAgAD2AoAApkvSwrPJETEVU9seAI': [
+        "а можно этому противостоять предупредить избежать жертв",
+    ],
+    'CAADAgAD2QoAApkvSwrwnhCFybp2-wI': [
+        "пойми это",
+    ],
 }
