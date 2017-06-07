@@ -69,13 +69,15 @@ def on_message(bot: Bot, update: Update):
     else:
         bot.send_message(
             message.chat.id,
-            config.INSTRUCTIONS_MSG,
+            config.INSTRUCTIONS_MSG.format(stickers_count=len(config.STICKERS)),
             parse_mode='Markdown')
 
 
 def main():
     if not config.TELEGRAM_BOT_KEY:
         raise RuntimeError("Please, put you bot api key into the config.")
+
+    print("Stickers in the DB: {}".format(len(config.STICKERS)))
 
     updater = Updater(token=config.TELEGRAM_BOT_KEY)
     dispatcher = updater.dispatcher
