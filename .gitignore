@@ -105,3 +105,6 @@ ENV/
 
 # Local config
 config/local.py
+
+# Local dev files
+docker-compose.yml
