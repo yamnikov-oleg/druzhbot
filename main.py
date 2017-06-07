@@ -58,7 +58,7 @@ def on_query(bot: Bot, update: Update):
         stickers = stickers[:50]
 
     results = [InlineQueryResultCachedSticker(fid, fid) for fid in stickers]
-    bot.answer_inline_query(inline_query.id, results, cache_time=0)
+    bot.answer_inline_query(inline_query.id, results, cache_time=600)
 
 
 def on_message(bot: Bot, update: Update):
