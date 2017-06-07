@@ -6,10 +6,21 @@ import config
 
 
 def on_message(bot: Bot, update: Update):
-    if not update.message:
+    message = update.message
+
+    if not message:
         return
 
-    bot.send_message(update.message.chat.id, "Hello world!")
+    if message.sticker:
+        bot.send_message(
+            message.chat.id,
+            config.STICKER_DATA_MSG.format(file_id=message.sticker.file_id),
+            parse_mode='Markdown')
+    else:
+        bot.send_message(
+            message.chat.id,
+            config.INSTRUCTIONS_MSG,
+            parse_mode='Markdown')
 
 
 def main():
