@@ -820,4 +820,72 @@ STICKERS = {
     'CAADAgAD2QoAApkvSwrwnhCFybp2-wI': [
         "пойми это",
     ],
+    # Pack by pikabu.ru user 'sashanewnew'
+    'CAADAgADPQAD6aWQBm1Uf6nb7NFyAg': [
+        "хайпанем немножечко",
+        "хайпанем немножко",
+    ],
+    'CAADAgADRwAD6aWQBp7ObJLYdEgCAg': [
+        "кому это выгодно",
+    ],
+    'CAADAgADPgAD6aWQBug8kw7VY-7DAg': [
+        "по моему ответ очевиден",
+    ],
+    'CAADAgADPwAD6aWQBkoNnoNmHW3WAg': [
+        "во всем виноват алексей навальный",
+    ],
+    'CAADAgADQAAD6aWQBjW0UtsTzA56Ag': [
+        "мне пришлось отправиться в мировую сеть чтобы решить эту проблему кардинально",
+    ],
+    'CAADAgADQQAD6aWQBlyD9OTV2pqbAg': [
+        "печальная история",
+    ],
+    'CAADAgADQgAD6aWQBg-wd2eJzEeCAg': [
+        "воровать не плохо",
+        "воровать неплохо",
+    ],
+    'CAADAgADQwAD6aWQBvZawPDlQMKwAg': [
+        "это ли не мистика",
+    ],
+    'CAADAgADRAAD6aWQBoiA8vzmuTziAg': [
+        "сложно сказать однозначно но я попробую я не знаю",
+    ],
+    'CAADAgADRQAD6aWQBt3hwlrg6PtXAg': [
+        "я обратился к потокам моего сознания и четко сформулировав вопрос начал ждать ответа",
+        "я обратился к потокам своего сознания и четко сформулировав вопрос начал ждать ответа",
+    ],
+    'CAADAgADRgAD6aWQBpzUPeirOxWLAg': [
+        "зачем мне нужны социальные сети",
+    ],
+    'CAADAgADSAAD6aWQBsV5tbLdfXQhAg': [
+        "это вишенка на торте хайпа",
+        "это вишня на торте хайпа",
+    ],
+    'CAADAgADSgAD6aWQBj_wNGQgx7WKAg': [
+        "то что вы увидели называется мем",
+        "то что вы увидели называется мэм",
+    ],
+    'CAADAgADSQAD6aWQBuYB_rELr6haAg': [
+        "а я пытался",
+    ],
+    'CAADAgADSwAD6aWQBk9k3zkXF_BVAg': [
+        "продолжаем хайпить",
+        "даб", "дэб", "деб",
+    ],
+    'CAADAgADTAAD6aWQBil1xfS18LHXAg': [
+        "с этим вопросом мне пришлось жить две минуты",
+        "с этим вопросом мне пришлось жить 2 минуты",
+    ],
+    'CAADAgADTQAD6aWQBupytBRE5H8FAg': [
+        "не лайкайте это похотливое животное",
+    ],
+    'CAADAgADTwAD6aWQBpU07X3EFYT6Ag': [
+        "за репост не сажают",
+    ],
+    'CAADAgADVwAD6aWQBrTJ8RZQy740Ag': [
+        "спойлеры в сети это плохо",
+    ],
+    'CAADAgADWAAD6aWQBnckoi4nx0-JAg': [
+        "простите я наврал",
+    ],
 }
