@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 import logging
+import random
 import sys
 from typing import List
 
@@ -47,24 +48,44 @@ def search_stickers(query: str) -> List[str]:
     return stickers
 
 
+def random_stickers(n: int) -> List[str]:
+    ids = list(config.STICKERS.keys())
+    random.shuffle(ids)
+    return ids[:n]
+
+
 def on_query(bot: Bot, update: Update):
+    # This constant is defined by the Bot API.
+    MAX_RESULTS = 50
+
     inline_query = update.inline_query
 
     if not inline_query:
         return
 
+    # If query is empty - return random stickers.
+    return_random = not inline_query.query
+
     logger.info("Inline query from {}:{} with text '{}'".format(
         inline_query.from_user.id, inline_query.from_user.first_name,
         inline_query.query))
 
-    stickers = search_stickers(inline_query.query)
+    if random_stickers:
+        stickers = random_stickers(MAX_RESULTS)
+    else:
+        stickers = search_stickers(inline_query.query)
 
-    # No more than 50 results are allowed by telegram bot api.
-    if len(stickers) > 50:
-        stickers = stickers[:50]
+    if len(stickers) > MAX_RESULTS:
+        stickers = stickers[:MAX_RESULTS]
 
     results = [InlineQueryResultCachedSticker(fid, fid) for fid in stickers]
-    bot.answer_inline_query(inline_query.id, results, cache_time=600)
+
+    cache_time = 600
+    if return_random:
+        # Do not cache random results.
+        cache_time = 0
+
+    bot.answer_inline_query(inline_query.id, results, cache_time=cache_time)
 
 
 def on_message(bot: Bot, update: Update):
