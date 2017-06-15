@@ -13,7 +13,7 @@ logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger()
 
 
-def into_words(q: str):
+def into_words(q: str) -> List[str]:
     # Remove all syntax symbols
     syntax_marks = ",.!?-"
     for sym in syntax_marks:
@@ -27,14 +27,14 @@ def into_words(q: str):
     return words
 
 
-def word_in_words(word: str, words: List[str]):
+def word_in_words(word: str, words: List[str]) -> bool:
     for w in words:
         if w.startswith(word):
             return True
     return False
 
 
-def search_stickers(query: str):
+def search_stickers(query: str) -> List[str]:
     query_words = into_words(query)
 
     stickers = []
