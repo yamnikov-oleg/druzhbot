@@ -70,7 +70,7 @@ def on_query(bot: Bot, update: Update):
         inline_query.from_user.id, inline_query.from_user.first_name,
         inline_query.query))
 
-    if random_stickers:
+    if return_random:
         stickers = random_stickers(MAX_RESULTS)
     else:
         stickers = search_stickers(inline_query.query)
