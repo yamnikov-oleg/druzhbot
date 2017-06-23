@@ -437,6 +437,114 @@ STICKERS = {
     'CAADAgADIQMAAtGzAgABqW81GbOMLIUC': [
         "я этого не позволю",
     ],
+    'CAADAgADNgMAAtGzAgABNBeYwK5mroEC': [
+        "и где смеяться",
+        "и где смеятся",
+    ],
+    'CAADAgADKQMAAtGzAgABcHzWkN9KBqgC': [
+        "я начал искать лазейки в законе",
+    ],
+    'CAADAgADKgMAAtGzAgABX-LXfpjJxgYC': [
+        "я заметил зияющую щель возможностей",
+    ],
+    'CAADAgADKwMAAtGzAgABDqg7EB50hdEC': [
+        "наверное",
+    ],
+    'CAADAgADLAMAAtGzAgABJSOoVgOmuAsC': [
+        "может быть",
+    ],
+    'CAADAgADLQMAAtGzAgABtW5cQpn5M8wC': [
+        "в этом я не уверен",
+    ],
+    'CAADAgADNwMAAtGzAgABGz_uj1LnaPMC': [
+        "хм хм",
+    ],
+    'CAADAgADLgMAAtGzAgABxPTrc0kGXK4C': [
+        "что же я наделал",
+    ],
+    'CAADAgADOQMAAtGzAgABmtkwaFKF3P4C': [
+        "ливать не плохо",
+        "ливать неплохо",
+    ],
+    'CAADAgADLwMAAtGzAgAByunFIujzGEwC': [
+        "от этого волосы на руках встали дыбом",
+    ],
+    'CAADAgADOgMAAtGzAgABzqDPJ_XQ3vAC': [
+        "не надо стесняться",
+    ],
+    'CAADAgADMAMAAtGzAgABmtiTRdYxj4kC': [
+        "не говори лол пока не перекекнешь",
+    ],
+    'CAADAgADOwMAAtGzAgABODLyCeYXJY0C': [
+        "скатился",
+    ],
+    'CAADAgADMQMAAtGzAgABKempLdTVW-IC': [
+        "злость",
+    ],
+    'CAADAgADPAMAAtGzAgABCnJ5YSZKNuUC': [
+        "юрий будет дудь дудь будет юрий",
+        "юрий будет дуть дуть будет юрий",
+    ],
+    'CAADAgADMgMAAtGzAgABKkYBk3iNRmcC': [
+        "смех",
+    ],
+    'CAADAgADMwMAAtGzAgABtm6p9R8_iukC': [
+        "удивление",
+    ],
+    'CAADAgADNAMAAtGzAgABB2cDxsTVnsUC': [
+        "разочарование",
+    ],
+    'CAADAgADPQMAAtGzAgABEm5WZ6YxR0MC': [
+        "креативный подход",
+    ],
+    'CAADAgADNQMAAtGzAgABSFg_EBzH4twC': [
+        "пока",
+    ],
+    'CAADAgADQAMAAtGzAgABqNTW_fTu0OUC': [
+        "хитман", "скрестил руки", "пистолеты", "пиф паф",
+    ],
+    'CAADAgADQQMAAtGzAgABNhbdftf5mwMC': [
+        "верните дурова",
+    ],
+    'CAADAgADQgMAAtGzAgABJQdxE2qi4YQC': [
+        "скотч разработка кгб",
+    ],
+    'CAADAgADQwMAAtGzAgABVwdhxxFOEQ0C': [
+        "игры развивают",
+    ],
+    'CAADAgADRAMAAtGzAgABBx6DYj0tkY4C': [
+        "ctrl c ctrl v",
+        "ктрл ц ктрл в",
+    ],
+    'CAADAgADRQMAAtGzAgABCStXa3MLTPUC': [
+        "хесоям",
+    ],
+    'CAADAgADRgMAAtGzAgABjJYdhEF8D74C': [
+        "дороу", "привет",
+    ],
+    'CAADAgADRwMAAtGzAgABLkcqbBlKMucC': [
+        # Это такое удовольствие - придумывать подписи к стикерам без цитат.
+        "подмигивание", "лукавый", "хитрый", "улыбка", "хехе", "ммм",
+    ],
+    'CAADAgADSAMAAtGzAgABdi74FoU2eUcC': [
+        "gl hf",
+        "гл хф",
+    ],
+    'CAADAgADSQMAAtGzAgABEs5w1vSuZNAC': [
+        "надеюсь они презентуют еще и игры",
+    ],
+    'CAADAgADSgMAAtGzAgABV9yG-PxJOaoC': [
+        "у человека должен быть выбор",
+    ],
+    'CAADAgADTwMAAtGzAgAB3Ti6WAABblMSAg': [
+        "gg", "гг",
+    ],
+    'CAADAgADTgMAAtGzAgABHKA-cK5pbQwC': [
+        "кризис пройден",
+    ],
+    'CAADAgADTQMAAtGzAgABFOGLcBIqzu4C': [
+        "попробуйте попить чай",
+    ],
     # Sticker pack of "Вторая ветка"
     'CAADAgADYAADW4tqB30mikv4tJaqAg': [
         "то что вы увидели называется мем",
