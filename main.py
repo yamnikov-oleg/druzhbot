@@ -5,6 +5,7 @@ import sys
 from functools import wraps
 from typing import List, Callable, Any
 
+import time
 from telegram import Bot, Update, InlineQueryResultCachedSticker
 from telegram.ext import Updater, MessageHandler, InlineQueryHandler, Filters
 
@@ -135,6 +136,34 @@ def on_message(bot: Bot, update: Update):
             parse_mode='Markdown')
 
 
+def check_stickers_integrity(chat_id: int, interval: float = 0.5):
+    """
+    This command sends every sticker from the db to the specified chat and
+    reports when sending has failed (e.g. due to invalid file_id).
+    """
+    if not config.TELEGRAM_BOT_KEY:
+        raise RuntimeError("Please, put you bot api key into the config.")
+
+    bot = Bot(config.TELEGRAM_BOT_KEY)
+
+    sticker_exceptions = {}
+    for i, file_id in enumerate(config.STICKERS.keys()):
+        logger.info("Sending {}/{}...".format(i+1, len(config.STICKERS)))
+
+        try:
+            bot.send_sticker(chat_id, file_id)
+        except Exception as e:
+            sticker_exceptions[file_id] = e
+            logger.error("{} failed with {}: {}".format(
+                file_id, type(e).__qualname__, str(e)))
+
+        time.sleep(interval)
+
+    logger.info("{} stickers failed to send:".format(len(sticker_exceptions)))
+    for file_id, exc in sticker_exceptions.items():
+        logger.info("{} - {}: {}".format(file_id, type(exc).__qualname__, str(exc)))
+
+
 def main():
     if not config.TELEGRAM_BOT_KEY:
         raise RuntimeError("Please, put you bot api key into the config.")
@@ -167,4 +196,8 @@ def main():
 
 
 if __name__ == '__main__':
-    main()
+    if len(sys.argv) == 1:
+        main()
+    elif sys.argv[1] == 'check_stickers_integrity':
+        chat_id = int(sys.argv[2])
+        check_stickers_integrity(chat_id)
