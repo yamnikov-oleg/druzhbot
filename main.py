@@ -2,7 +2,8 @@
 import logging
 import random
 import sys
-from typing import List
+from functools import wraps
+from typing import List, Callable, Any
 
 from telegram import Bot, Update, InlineQueryResultCachedSticker
 from telegram.ext import Updater, MessageHandler, InlineQueryHandler, Filters
@@ -54,6 +55,17 @@ def random_stickers(n: int) -> List[str]:
     return ids[:n]
 
 
+def log_exceptions(f: Callable[[Any], Any]):
+    @wraps(f)
+    def wrapper(*args, **kwargs):
+        try:
+            return f(*args, **kwargs)
+        except Exception as e:
+            logger.error("{} on {}: {}".format(type(e).__qualname__, f.__name__, str(e)))
+    return wrapper
+
+
+@log_exceptions
 def on_query(bot: Bot, update: Update):
     # This constant is defined by the Bot API.
     MAX_RESULTS = 50
@@ -88,6 +100,7 @@ def on_query(bot: Bot, update: Update):
     bot.answer_inline_query(inline_query.id, results, cache_time=cache_time)
 
 
+@log_exceptions
 def on_message(bot: Bot, update: Update):
     message = update.message
 
