@@ -364,7 +364,7 @@ STICKERS = {
         "летс гоу",
         "let s go",
     ],
-    'CAADAgADEQMAAtGzAgABaODXZVN1Q': [
+    'CAADAgADEQMAAtGzAgABaODXZVN1Q-EC': [
         "мои поиски закончены",
     ],
     'CAADAgADAQMAAtGzAgABnudGrtiqLKgC': [
