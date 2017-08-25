@@ -137,8 +137,19 @@ def main():
     msg_handler = MessageHandler(Filters.all, on_message)
     dispatcher.add_handler(msg_handler)
 
-    logger.info("Starting the druzhbot...")
-    updater.start_polling()
+    if config.ENABLE_WEBHOOK:
+        logger.info("Starting druzhbot webhook at {}...".format(config.WEBHOOK_URL))
+        updater.start_webhook(
+            listen='0.0.0.0',
+            port=config.WEBHOOK_PORT,
+            webhook_url=config.WEBHOOK_URL,
+            cert=config.WEBHOOK_CERT,
+            key=config.WEBHOOK_CERT_KEY)
+    else:
+        logger.info("Starting druzhbot polling...")
+        updater.start_polling()
+
+    updater.idle()
 
 
 if __name__ == '__main__':

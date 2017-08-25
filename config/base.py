@@ -1,6 +1,13 @@
 # Please, insert your bot api key, provided by the BotFather.
 TELEGRAM_BOT_KEY = ""
 
+ENABLE_WEBHOOK = False
+
+WEBHOOK_PORT = 80
+WEBHOOK_URL = "http://example.com/"
+WEBHOOK_CERT = None
+WEBHOOK_CERT_KEY = None
+
 INSTRUCTIONS_MSG="""
 Привет! Я инлайновый бот, который поможет тебе найти стикеры с самыми хайповыми цитатами Сергея Дружко.
 
