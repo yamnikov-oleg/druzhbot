@@ -145,6 +145,7 @@ def main():
             webhook_url=config.WEBHOOK_URL,
             cert=config.WEBHOOK_CERT,
             key=config.WEBHOOK_CERT_KEY)
+        updater.bot.set_webhook(config.WEBHOOK_URL)
     else:
         logger.info("Starting druzhbot polling...")
         updater.start_polling()
