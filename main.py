@@ -2,6 +2,7 @@
 import random
 import sys
 import time
+from datetime import datetime
 from functools import wraps
 from typing import List, Callable, Any, Dict
 
@@ -10,6 +11,18 @@ from telegram import Bot, Update, InlineQueryResultCachedSticker
 from telegram.ext import Updater, MessageHandler, InlineQueryHandler, Filters
 
 import config
+
+
+def add_timestamp_logproc(
+        _logger: Any,
+        _method: str,
+        event_dict: Dict[str, Any]) -> Dict[str, Any]:
+    """
+    Structlog processor, adding current timstamp to the log entry.
+    """
+
+    event_dict['_when'] = datetime.utcnow().isoformat()
+    return event_dict
 
 
 def rename_event_logproc(
@@ -32,7 +45,11 @@ logger = structlog.wrap_logger(
     structlog.PrintLogger(),
     processors=[
         rename_event_logproc,
-        structlog.processors.JSONRenderer(sort_keys=True),
+        add_timestamp_logproc,
+        structlog.processors.JSONRenderer(
+            sort_keys=True,
+            ensure_ascii=False,
+        ),
     ],
 )
 
