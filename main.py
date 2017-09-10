@@ -77,7 +77,7 @@ def random_stickers(n: int) -> List[str]:
     return ids[:n]
 
 
-def log_exceptions(f: Callable[[Any], Any]):
+def log_exceptions(f: Callable):
     @wraps(f)
     def wrapper(*args, **kwargs):
         try:
