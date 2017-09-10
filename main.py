@@ -1,19 +1,40 @@
 #!/usr/bin/env python3
-import logging
 import random
 import sys
-from functools import wraps
-from typing import List, Callable, Any
-
 import time
+from functools import wraps
+from typing import List, Callable, Any, Dict
+
+import structlog
 from telegram import Bot, Update, InlineQueryResultCachedSticker
 from telegram.ext import Updater, MessageHandler, InlineQueryHandler, Filters
 
 import config
 
 
-logging.basicConfig(level=logging.INFO)
-logger = logging.getLogger()
+def rename_event_logproc(
+        _logger: Any,
+        _method: str,
+        event_dict: Dict[str, Any]) -> Dict[str, Any]:
+    """
+    Structlog processor, renaming 'event' key to '_event', so it would
+    always be the first one when keys are sorted.
+    """
+
+    if 'event' in event_dict:
+        event_dict['_event'] = event_dict['event']
+        del event_dict['event']
+
+    return event_dict
+
+
+logger = structlog.wrap_logger(
+    structlog.PrintLogger(),
+    processors=[
+        rename_event_logproc,
+        structlog.processors.JSONRenderer(sort_keys=True),
+    ],
+)
 
 
 def into_words(q: str) -> List[str]:
@@ -62,7 +83,10 @@ def log_exceptions(f: Callable[[Any], Any]):
         try:
             return f(*args, **kwargs)
         except Exception as e:
-            logger.error("{} on {}: {}".format(type(e).__qualname__, f.__name__, str(e)))
+            logger.error("Exception caught",
+                type=type(e).__qualname__,
+                value=str(e),
+                func=f.__name__)
     return wrapper
 
 
@@ -79,9 +103,10 @@ def on_query(bot: Bot, update: Update):
     # If query is empty - return random stickers.
     return_random = not inline_query.query
 
-    logger.info("Inline query from {}:{} with text '{}'".format(
-        inline_query.from_user.id, inline_query.from_user.first_name,
-        inline_query.query))
+    logger.info("Inline query received",
+        from_id=inline_query.from_user.id,
+        from_name=inline_query.from_user.first_name,
+        text=inline_query.query)
 
     if return_random:
         stickers = random_stickers(MAX_RESULTS)
@@ -108,28 +133,35 @@ def on_message(bot: Bot, update: Update):
     if not message:
         return
 
+    msg_logger = logger.bind(
+        from_id=message.from_user.id,
+        from_name=message.from_user.name)
+
     is_sticker = bool(message.sticker)
     sticker_is_in_db = is_sticker and message.sticker.file_id in config.STICKERS
 
     if sticker_is_in_db:
-        logger.info("Message from {}:{} with known sticker '{}'".format(
-            message.from_user.id, message.from_user.first_name,
-            message.sticker.file_id))
+        msg_logger.info("Sticker received",
+            file_id=message.sticker.file_id,
+            known=True)
+
         bot.send_message(
             message.chat.id,
             config.HYPE_MSG,
             parse_mode='Markdown')
     elif is_sticker:
-        logger.info("Message from {}:{} with unknown sticker '{}'".format(
-            message.from_user.id, message.from_user.first_name,
-            message.sticker.file_id))
+        msg_logger.info("Sticker received",
+            file_id=message.sticker.file_id,
+            known=False)
+
         bot.send_message(
             message.chat.id,
             config.STICKER_DATA_MSG.format(file_id=message.sticker.file_id),
             parse_mode='Markdown')
     else:
-        logger.info("Message from {}:{} with text '{}'".format(
-            message.from_user.id, message.from_user.first_name, message.text))
+        msg_logger.info("Text message received",
+            text=message.text)
+
         bot.send_message(
             message.chat.id,
             config.INSTRUCTIONS_MSG.format(stickers_count=len(config.STICKERS)),
@@ -148,27 +180,34 @@ def check_stickers_integrity(chat_id: int, interval: float = 0.5):
 
     sticker_exceptions = {}
     for i, file_id in enumerate(config.STICKERS.keys()):
-        logger.info("Sending {}/{}...".format(i+1, len(config.STICKERS)))
+        iter_logger = logger.bind(
+            current=i+1,
+            total=len(config.STICKERS))
+
+        iter_logger.info("Integrity check progresses")
 
         try:
             bot.send_sticker(chat_id, file_id)
         except Exception as e:
             sticker_exceptions[file_id] = e
-            logger.error("{} failed with {}: {}".format(
-                file_id, type(e).__qualname__, str(e)))
+            iter_logger.error("Sticker integrity check failed",
+                file_id=file_id,
+                exc_type=type(e).__qualname__,
+                exc_value=str(e))
 
         time.sleep(interval)
 
-    logger.info("{} stickers failed to send:".format(len(sticker_exceptions)))
+    logger.info("Integrity check finished",
+        failed=len(sticker_exceptions),
+        total=len(config.STICKERS))
+
     for file_id, exc in sticker_exceptions.items():
-        logger.info("{} - {}: {}".format(file_id, type(exc).__qualname__, str(exc)))
+        print("{} - {}: {}".format(file_id, type(exc).__qualname__, str(exc)))
 
 
 def main():
     if not config.TELEGRAM_BOT_KEY:
         raise RuntimeError("Please, put you bot api key into the config.")
-
-    logger.info("Stickers in the DB: {}".format(len(config.STICKERS)))
 
     updater = Updater(token=config.TELEGRAM_BOT_KEY)
     dispatcher = updater.dispatcher
@@ -180,7 +219,11 @@ def main():
     dispatcher.add_handler(msg_handler)
 
     if config.ENABLE_WEBHOOK:
-        logger.info("Starting druzhbot webhook at {}...".format(config.WEBHOOK_URL))
+        logger.info("Instance started",
+            sticker_in_db=len(config.STICKERS),
+            mode='webhook',
+            webhook_url=config.WEBHOOK_URL)
+
         updater.start_webhook(
             listen='0.0.0.0',
             port=config.WEBHOOK_PORT,
@@ -189,7 +232,10 @@ def main():
             key=config.WEBHOOK_CERT_KEY)
         updater.bot.set_webhook(config.WEBHOOK_URL)
     else:
-        logger.info("Starting druzhbot polling...")
+        logger.info("Instance started",
+            sticker_in_db=len(config.STICKERS),
+            mode='polling')
+
         updater.start_polling()
 
     updater.idle()

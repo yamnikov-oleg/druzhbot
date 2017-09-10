@@ -1,3 +1,4 @@
 certifi==2017.7.27.1
 future==0.16.0
 python-telegram-bot==7.0.1
+structlog==17.2.0
