@@ -109,5 +109,6 @@ config/local.py
 # Local dev files
 docker-compose.yml
 
-# IDEA files
+# IDE files
 .idea
+.vscode
