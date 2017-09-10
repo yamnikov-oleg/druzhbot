@@ -5,3 +5,4 @@ __pycache__
 config/local.py
 venv
 Dockerfile
+.mypy_cache

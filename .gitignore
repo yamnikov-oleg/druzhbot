@@ -112,3 +112,4 @@ docker-compose.yml
 # IDE files
 .idea
 .vscode
+.mypy_cache
